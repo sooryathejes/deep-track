@@ -6,7 +6,6 @@ import vector from './img/Illustration_for_website-removebg-preview.png'
 const data = [
     { name: "Jan", sales: 4000 },
     { name: "Feb", sales: 3000 },
-
 ];
 
 

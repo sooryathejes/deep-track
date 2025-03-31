@@ -28,7 +28,7 @@ const Profile = () => {
     };
 
     useEffect(() => {
-        fetchUserData() 
+        fetchUserData()
     }, [])
     let handleLogOut = async () => {
         try {
@@ -87,7 +87,6 @@ const Profile = () => {
                 </div>
 
             )}
-
         </div>
     )
 }

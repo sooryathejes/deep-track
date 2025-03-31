@@ -3,6 +3,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from './firebase'
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom';
+import SigninWithGoogle from './SigninWithGoogle';
 
 export default function LogIn() {
     const [email, setEmail] = useState("")
@@ -38,10 +39,7 @@ export default function LogIn() {
                 <p className="flex text-[10px] justify-center my-[32px]">
                     or log in with other services
                 </p>
-                <div className="flex gap-2 max-w-[320px] py-2 px-4 border-2 rounded-full font-bold border-black cursor-pointer">
-                    <img src="//images.ctfassets.net/8cd2csgvqd3m/1ukEuImLeObocDsKbiFMQC/ded84c7c390edfc2e4543966a6c882bb/Google_Logo.svg" alt="Google Logo" />
-                    Continue with Google
-                </div>
+               <SigninWithGoogle/>
             </form> 
         </div>
     )

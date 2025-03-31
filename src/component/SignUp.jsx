@@ -5,6 +5,7 @@ import { auth, db } from './firebase';
 import { setDoc,doc } from 'firebase/firestore';
 import { toast, ToastContainer } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; 
+import SigninWithGoogle from './SigninWithGoogle';
 
 export default function SignUp() {
     const [email, setEmail] = useState("");
@@ -34,8 +35,6 @@ export default function SignUp() {
                     email: email,
                     createdAt: new Date(),
                 });
-                
-                
             }
         } catch (err) {
             toast.error(err.message, {
@@ -81,13 +80,7 @@ export default function SignUp() {
             <p className="flex w-full text-[10px] justify-center my-[32px]">
                 or sign up with other services
             </p>
-            <div className='w-full flex justify-center'>
-                <div className="flex gap-2 max-w-[320px] py-2 px-4 border-2 rounded-full font-bold border-black cursor-pointer">
-                    <img src="//images.ctfassets.net/8cd2csgvqd3m/1ukEuImLeObocDsKbiFMQC/ded84c7c390edfc2e4543966a6c882bb/Google_Logo.svg" alt="Google Logo" />
-                    SignUp with Google
-                </div>
-            </div>
-
+            <SigninWithGoogle/>
             <ToastContainer />
         </div>
     );

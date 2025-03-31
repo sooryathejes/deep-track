@@ -8,20 +8,22 @@ import Profile from './component/Profile';
 import UpdateTime from './component/UpdateTime';
 import Compare from './component/Compare';
 import DailyStat from './component/DailyStat';
+import { UserProvider } from './component/UserContext';
 
 function App() {
   return (
     <div className="App">
         <Header />
+        <UserProvider>
         <Routes>
           <Route path="/" element={<LogInSingnUp/>} />
           <Route path="/home" element={<Home/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/updateTime" element={<UpdateTime/>}/>
           <Route path="/compare" element={<Compare/>}/>
-          <Route path="/dailyStat" element={<DailyStat/>}/>
-
+          <Route path="/dailyStat" element={<DailyStat/>}/> 
         </Routes>
+        </UserProvider>
         <ToastContainer/> 
     </div>
   );
